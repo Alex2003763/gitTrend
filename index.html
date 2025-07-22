@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitTrend - 探索 GitHub 熱門專案</title>
+    <meta name="description" content="GitTrend 是一個幫助您探索 GitHub 上最新、最熱門專案的平台。您可以依時間、語言進行篩選，並即時搜尋感興趣的專案。">
+    <meta name="keywords" content="GitHub, Trending, Repositories, Projects, Open Source, 熱門專案, 開源, 趨勢">
+    <meta name="author" content="GitTrend">
+    <link rel="canonical" href="https://gittrend.example.com"> <!-- 請在部署後將此 URL 替換為您的實際網址 -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gittrend.example.com"> <!-- 請在部署後將此 URL 替換為您的實際網址 -->
+    <meta property="og:title" content="GitTrend - 探索 GitHub 熱門專案">
+    <meta property="og:description" content="探索 GitHub 上最新、最熱門的專案。">
+    <meta property="og:image" content="https://gittrend.example.com/og-image.png"> <!-- 建議您建立一個預覽圖片 -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gittrend.example.com"> <!-- 請在部署後將此 URL 替換為您的實際網址 -->
+    <meta property="twitter:title" content="GitTrend - 探索 GitHub 熱門專案">
+    <meta property="twitter:description" content="探索 GitHub 上最新、最熱門的專案。">
+    <meta property="twitter:image" content="https://gittrend.example.com/og-image.png"> <!-- 建議您建立一個預覽圖片 -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>GitTrend</h1>
+            <div class="theme-switcher">
+                <label for="theme-toggle" class="theme-toggle-label"></label>
+                <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+            </div>
+        </div>
+        <div class="controls">
+            <div id="time-filter-group" class="filter-group">
+                <button class="time-filter-btn active" data-time="all">所有時間</button>
+                <button class="time-filter-btn" data-time="year">今年</button>
+                <button class="time-filter-btn" data-time="month">本月</button>
+                <button class="time-filter-btn" data-time="week">本週</button>
+            </div>
+            <div class="search-filter-group">
+                <input type="text" id="search-input" placeholder="搜尋專案...">
+                <select id="language-filter">
+                    <option value="">所有語言</option>
+                    <!-- 語言選項將由 JS 動態產生 -->
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="repo-container">
+            <!-- 專案列表將會動態插入到這裡 -->
+        </div>
+        <div id="pagination-container" class="pagination-container"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
